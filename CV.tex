@@ -22,15 +22,16 @@
 \usepackage{sectsty} % Custom section fonts
 \usepackage{xeCJK} % 讓中英文字體分開設置
 % ---------- 字型 ----------
-\ifwindows
+% Use \IfFontExistsTF (fontspec) to auto-detect Windows vs Linux fonts
+\IfFontExistsTF{Times New Roman}{%
   \setmainfont{Times New Roman}
   \setCJKmainfont{PMingLiU}
   \newCJKfontfamily\heiti{Microsoft JhengHei}
-\else
-  \setmainfont{TeX Gyre Termes}  % Times New Roman substitute on Linux
+}{%
+  \setmainfont{TeX Gyre Termes}  % Times New Roman substitute on Linux/Overleaf
   \setCJKmainfont{Noto Serif CJK TC}
   \newCJKfontfamily\heiti{Noto Sans CJK TC}
-\fi
+}
 %\setCJKmainfont{新細明體} %設定中文為系統上的字型,而英文不去更動,使用原TeX字型
 %\usepackage[MnSymbol]{mathspec}
 %\setmainfont{Minion Pro}

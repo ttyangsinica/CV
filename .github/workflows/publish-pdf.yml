@@ -1,0 +1,106 @@
+name: Build and Publish CV PDF (GitHub Pages)
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # ------------------------------------------------------------
+  # 1) Build PDF, upload as artifact
+  # ------------------------------------------------------------
+  build_pdf:
+    name: Build PDF
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ---- CV ----
+      - name: Compile CV.tex (XeLaTeX + CJK)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: CV.tex
+          latexmk_use_xelatex: true
+          args: -interaction=nonstopmode -file-line-error -halt-on-error
+          extra_system_packages: |
+            fontconfig
+            font-noto-cjk
+          continue_on_error: true
+
+      - name: Upload PDF (CV)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf_CV
+          path: CV.pdf
+
+      # ---- Logs (optional but useful) ----
+      - name: Upload LaTeX logs (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: latex_logs
+          path: |
+            *.log
+            *.fls
+            *.fdb_latexmk
+
+  # ------------------------------------------------------------
+  # 2) Deploy PDF to GitHub Pages
+  # ------------------------------------------------------------
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: [ build_pdf ]
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Download PDF artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pdf_CV
+          path: public
+
+      - name: Generate index.html
+        shell: bash
+        run: |
+          set -e
+          {
+            echo "<!doctype html>"
+            echo "<html><head><meta charset='utf-8'>"
+            echo "<meta name='viewport' content='width=device-width, initial-scale=1'>"
+            echo "<title>CV – Tzu-Ting Yang</title>"
+            echo "<style>"
+            echo "body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;max-width:640px;margin:40px auto;padding:0 16px;}"
+            echo "h1{font-size:22px;margin:0 0 8px 0;}"
+            echo "ul{margin:12px 0 0 18px;} li{margin:6px 0;}"
+            echo "a{text-decoration:none;} a:hover{text-decoration:underline;}"
+            echo ".muted{color:#666;font-size:13px;margin-top:8px;}"
+            echo "</style>"
+            echo "</head><body>"
+            echo "<h1>Tzu-Ting Yang – Curriculum Vitae</h1>"
+            echo "<ul>"
+            echo "<li><a href='CV.pdf'>CV.pdf</a></li>"
+            echo "</ul>"
+            echo "<p class='muted'>Updated automatically from the repository.</p>"
+            echo "</body></html>"
+          } > public/index.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

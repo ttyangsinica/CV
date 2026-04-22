@@ -22,11 +22,12 @@
 \usepackage{sectsty} % Custom section fonts
 \usepackage{xeCJK} % 讓中英文字體分開設置
 % ---------- 字型 ----------
-\setmainfont{Times New Roman}
 \ifwindows
+  \setmainfont{Times New Roman}
   \setCJKmainfont{PMingLiU}
   \newCJKfontfamily\heiti{Microsoft JhengHei}
 \else
+  \setmainfont{TeX Gyre Termes}  % Times New Roman substitute on Linux
   \setCJKmainfont{Noto Serif CJK TC}
   \newCJKfontfamily\heiti{Noto Sans CJK TC}
 \fi
@@ -48,10 +49,12 @@
 
 % Title
 %\newfontfamily\titleface{Chaparral Pro Subhead}
+\let\titleface\relax  % fallback: use current font
 \newcommand{\titlefont}[1]{{\titleface\large\MakeUppercase{#1}}}
 
 % Section Headings
 %\newfontfamily\sectionface{Chaparral Pro Subhead}
+\let\sectionface\relax  % fallback: use current font
 \sectionfont{\sectionface\mdseries\normalsize\uppercase}
 \subsectionfont{\sectionface\mdseries\normalsize\itshape}
 
@@ -252,7 +255,7 @@ Applied Micro, Labor Economics, Health Economics and Public Economics
 \href{https://www.dropbox.com/s/lz3pqw0rozyn68r/knowing_taiwan_ver_2017_08_tzu_ting_v58.pdf?dl=0}{Curriculum and National Identity: Evidence from the 1997 Curriculum Reform in Taiwan} \textit{\textbf{Journal of Development Economics}}, 163, 103078, 2023 (with Wei-Lin Chen and Ming-Jen Lin).
 
 \item
-\href{https://doi.org/10.1371/journal.pone.0271810}{Measuring voluntary responses in healthcare utilization during the COVID-19 pandemic: Evidence from Taiwan}  \textit{\textbf{PLOS ONE}}, 17(12): e0271810, 2022 (with Yung-Yu Tsai). :contentReference[oaicite:1]{index=1}
+\href{https://doi.org/10.1371/journal.pone.0271810}{Measuring voluntary responses in healthcare utilization during the COVID-19 pandemic: Evidence from Taiwan}  \textit{\textbf{PLOS ONE}}, 17(12): e0271810, 2022 (with Yung-Yu Tsai).
 
 
 \item

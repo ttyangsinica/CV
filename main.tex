@@ -1,0 +1,467 @@
+% Jason R. Blevins - Curriculum Vitae
+%
+% Copyright (C) 2004-2018 Jason R. Blevins <jblevins@xbeta.org>
+% https://jblevins.org/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely.  No attribution is
+% required in any resulting documents.  I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[10pt,letterpaper]{article}
+
+% Set your name here
+\def\name{\textbf{Tzu-Ting Yang (楊子霆)}}
+
+% Load packages
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{enumitem} % Enumerate with [resume] option
+\usepackage{fontspec} % Requires XeTeX
+\usepackage{sectsty} % Custom section fonts
+\usepackage{xeCJK} % 讓中英文字體分開設置
+% ---------- 字型 ----------
+\setmainfont{Times New Roman}
+\ifwindows
+  \setCJKmainfont{PMingLiU}
+  \newCJKfontfamily\heiti{Microsoft JhengHei}
+\else
+  \setCJKmainfont{Noto Serif CJK TC}
+  \newCJKfontfamily\heiti{Noto Sans CJK TC}
+\fi
+%\setCJKmainfont{新細明體} %設定中文為系統上的字型,而英文不去更動,使用原TeX字型
+%\usepackage[MnSymbol]{mathspec}
+%\setmainfont{Minion Pro}
+%\setmathfont[range=\mathup/{num,latin,Latin,greek,Greek}]{Minion Pro}
+%\setmathfont[range=\mathbfup/{num,latin,Latin,greek,Greek}]{MinionPro-Bold}
+%\setmathfont[range=\mathit/{num,latin,Latin,greek,Greek}]{MinionPro-It}
+%\setmathfont[range=\mathbfit/{num,latin,Latin,greek,Greek}]{MinionPro-BoldIt}
+
+%\setCJKmainfont{CWTEX}
+%\setCJKfamilyfont{R}{CWTEX-R}
+%\setmainfont[Numbers=OldStyle]{Minion Pro}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt %這兩行一定要加,中文才能自動換行
+% Body
+%\setmainfont{Garamond Premier Pro}
+
+% Title
+%\newfontfamily\titleface{Chaparral Pro Subhead}
+\newcommand{\titlefont}[1]{{\titleface\large\MakeUppercase{#1}}}
+
+% Section Headings
+%\newfontfamily\sectionface{Chaparral Pro Subhead}
+\sectionfont{\sectionface\mdseries\normalsize\uppercase}
+\subsectionfont{\sectionface\mdseries\normalsize\itshape}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, econometrics, empirical industrial organization,
+    applied microeconomics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 9.0in},
+  left=1.0in,
+  top=1.0in
+}
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets and compact spacing
+\renewenvironment{itemize}{
+  \begin{list}{}{
+      \setlength{\leftmargin}{1.5em}
+      \setlength{\itemsep}{0.25em}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0.25em}
+    }
+}{
+  \end{list}
+}
+\setlist[enumerate]{itemsep=0.25em}
+
+% Print the month and year
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or April\or May%
+\or June\or July\or August\or September\or October\or November\or December\fi%
+\space \number \year}
+
+\begin{document}
+
+% Place name at left and date at right
+\titlefont{\name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\titlefont{\name}}
+
+% Date
+\bigskip
+\today
+
+% Contact Information
+\bigskip
+\begin{minipage}[t]{0.495\textwidth}
+  Institute of Economics \\
+  Academia Sinica \\
+  308 Building B \\
+  128 Academia Road, Section 2 \\
+  Taipei, Taiwan
+\end{minipage}
+\begin{minipage}[t]{0.495\textwidth}
+  Phone: 886-2782-2791 \\
+  Fax: 886-2782-2791 \\
+  Office: 308 Building B \\
+  Email: \href{mailto:ttyang@econ.sinica.edu.tw}{ttyang@econ.sinica.edu.tw} \\
+  Homepage: \href{https://sites.google.com/view/cpelab/}{https://sites.google.com/view/cpelab/}
+\end{minipage}
+
+\section*{\textbf{Full-Time Faculty Positions}}
+
+\begin{itemize}
+\item Institute of Economics, Academia Sinica
+  \begin{itemize}
+  	  \item Associate Research Fellow, 2021--present.
+  \item Assistant Research Fellow, 2015--2021.
+  %\item Assistant Professor, 2010--2017.
+  \end{itemize}
+\end{itemize}
+\section*{\textbf{Joint Appointment \& Adjunct Faculty Positions}}
+\begin{itemize}
+\item Department of Agricultural Economics, National Taiwan University
+\begin{itemize}
+	\item Associate Professor, 2023--present
+\end{itemize}		
+		
+\item IMES program, National Chengchi University
+\begin{itemize}
+	\item Associate Professor, 2021--present
+	\item Assistant Professor, 2017--2021
+\end{itemize}	
+	
+\item Department of Economics, National Taiwan University
+\begin{itemize}
+	\item Associate Professor, 2021--present.
+	\item Assistant Professor, 2019--2021.
+	%\item Assistant Professor, 2010--2017.
+\end{itemize}
+
+
+\end{itemize}
+
+% \subsection*{Duke University, Department of Economics}
+%
+% \begin{itemize}
+% \item Research Assistant, Jacob Vigdor, Summer 2005--Summer 2006.
+% \item Teaching Assistant, Ph.D. Microeconomic Analysis, Thomas Nechyba, Fall 2005.
+% \item Teaching Assistant, Ph.D. Game Theory, Curtis Taylor, Spring 2006.
+% \item Instructor, Microeconomics Qualifier Camp, Summer 2006.
+% \item Research Assistant, Han Hong, Fall 2006--Spring 2007.
+% \item Research Assistant, Aprajit Mahajan and Alessandro Tarozzi,
+%   October--November 2006, March--June 2007.
+% \item Research Assistant, Shakeeb Khan and Christopher Timmins,
+%   March--June 2007.
+% \item Teaching Assistant, Ph.D. Econometrics II, Shakeeb Khan,
+%   Spring 2007.
+% \item Research Assistant, Peter Arcidiacono, Patrick Bayer,
+%   and Paul Ellickson, Fall 2007--Spring 2009.
+% \item Research Assistant, Shakeeb Khan, Fall 2009--Spring 2010.
+% \item Research Assistant, Aprajit Mahajan, July--September 2009.
+% \end{itemize}
+
+% \subsection*{North Carolina State University, Department of Mathematics}
+%
+% \begin{itemize}
+% \item Research Assistant, Moody Chu and Robert Funderlic,
+%   Spring 2003--Fall 2004.
+% \item Mathematics Tutor, Academic Support Program for Student Athletes,
+%   Summer 2001.
+% \end{itemize}
+
+% \subsection*{Colorado School of Mines,
+%   Department of Mathematical and Computer Sciences}
+%
+% \begin{itemize}
+% \item Research Assistant, Willy Hereman, Summer 2002.
+% \end{itemize}
+
+\section*{\textbf{Education}}
+
+\begin{itemize}
+  \item Ph.D. in Economics, University of British Columbia, 2010 - 2015
+    % Received May 16, 2010
+    %\begin{itemize}
+    %\item Dissertation Title: ``Essays in Industrial Organization and Econometrics''.
+    %\item Committee: Han Hong (co-chair), Shakeeb Khan (co-chair), Paul Ellickson, Andrew Sweeting.
+    %\item Institute on Computational Economics Fellow, University of Chicago, 2006.
+    %\end{itemize}
+  \item M.A. in Economics, National Taiwan University, 2006 - 2008
+    % Received May 14, 2006
+  \item B.A. in Political Science, National Taiwan University, 2002 - 2006
+    % Received May 14, 2004
+    %\begin{itemize}
+    %\item Phi Beta Kappa, Zeta of North Carolina, 2003.
+    %\item Budapest Semesters in Mathematics, Fall 2002.
+    %\item NSF Research Experiences for Undergraduates, Colorado School of Mines, 2002.
+    %\end{itemize}
+\end{itemize}
+
+\section*{\textbf{Research Interests}}
+
+Applied Micro, Labor Economics, Health Economics and Public Economics
+
+\section*{\textbf{Publications}}
+
+\begin{enumerate}
+%\begin{itemize}
+
+
+
+
+\item
+\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4300448}{The Effect of Financial Resources on Fertility: Evidence from Administrative Data on Lottery Winners} \textit{\textbf{Journal of Labor Economics}}, \textit{forthcoming} (with Yung-Yu Tsai, Hsing-Wen Han and Kuang-Ta Lo).
+
+\item
+\href{https://www.dropbox.com/scl/fi/xigzri0wajwxznqpplb4c/Dynamics-and-Sources-of-Wage-Inequality-in-Taiwan-Evidence-from-Employer-Employee-Matched-Data.pdf?rlkey=6jwpdl3vgwgk82z9q75s9cgg3&dl=0}{Dynamics and Sources of Wage Inequality in Taiwan: Evidence from Employer-Employee Matched Data} \textit{\textbf{Economic Inquiry}}, \textit{forthcoming} (with Huei-Ming Chen, Hsien-Ming Lien, and Po-Chun Huang).
+
+\item
+\href{https://www.sciencedirect.com/science/article/abs/pii/S0304387825000112}{Parental Responses to Child Disability: Gender Differences and Relative Earnings} \textit{\textbf{Journal of Development Economics}}, 2025 (with Kamhon Kan and T. Terry Cheung).
+
+\item
+\href{https://www.sciencedirect.com/science/article/abs/pii/S0378426624002929}{Windfall Gains and Stock Market Participation Evidence from Shopping Receipt Lottery} \textit{\textbf{Journal of Banking and Finance}}, 2025 (with Tzu-Chang Forrest Cheng, Hsuan-Hua Huang, Tse-Chun Lin and Jian-Da Zhu).
+
+
+\item
+\href{https://www.dropbox.com/scl/fi/l9acw3h4gj8yzrdfav2w5/Job-Loss_Health_Full_v2.pdf?rlkey=bkgdf6v72teahl6jj4iq7b440&dl=0}{Long-term Effects of Job Displacement on Earnings and Mental health: Evidence from Population-wide Administrative Data} \textit{\textbf{Economics Letters}}, 111688, 2024 (with Yung-Yu Tsai and Po-Chun Huang).
+
+\item
+\href{https://www.dropbox.com/s/lz3pqw0rozyn68r/knowing_taiwan_ver_2017_08_tzu_ting_v58.pdf?dl=0}{Curriculum and National Identity: Evidence from the 1997 Curriculum Reform in Taiwan} \textit{\textbf{Journal of Development Economics}}, 163, 103078, 2023 (with Wei-Lin Chen and Ming-Jen Lin).
+
+\item
+\href{https://doi.org/10.1371/journal.pone.0271810}{Measuring voluntary responses in healthcare utilization during the COVID-19 pandemic: Evidence from Taiwan}  \textit{\textbf{PLOS ONE}}, 17(12): e0271810, 2022 (with Yung-Yu Tsai). :contentReference[oaicite:1]{index=1}
+
+
+\item
+\href{https://www.dropbox.com/s/etfzl98k6d83ef5/Spontaneous_Population_Mobility_v23.pdf?dl=0}{JUE Insight: Demand for Transportation and Spatial Pattern of Economic Activity during the Pandemic} \textit{\textbf{Journal of Urban Economics}},127, 103426, 2022 (with Kong-Pin Chen and Jui-Chung Yang).
+
+\item
+\href{https://www.dropbox.com/s/4bmmsvl2mko0thu/Optimal_UI_Tzu_Ting_v142.pdf?dl=0}{The Welfare Effects of Extending Unemployment Benefits: Evidence from Re-­employment and Unemployment Transfers} \textit{\textbf{Journal of Public Economics}}, 202 104500, 2021 (with Po-Chun Huang).
+
+\item \href{https://www.dropbox.com/s/pe5n9a74avtwk6v/Children_copay_v176_parametric.pdf?dl=0}{Patient Cost-Sharing and Healthcare Utilization in Early Childhood: Evidence from a Regression Discontinuity Design}.
+\textit{\textbf{American Economics Journal: Economic Policy}}, 12(3) 238-278, 2020 (with Hsing-Wen Han and Hsien-Ming Lien).
+
+\item
+\href{https://www.dropbox.com/s/i792d6jutss65b2/Proposal_pension_saving_JRI_v91_final.pdf?dl=0}{The Effect of Workplace Pensions on Household Saving: Evidence from a Natural Experiment in Taiwan}.
+\textit{\textbf{Journal of Risk and Insurance}}, 87(1) 173-194, 2020.
+
+\item \href{http://jhr.uwpress.org/content/early/2017/03/01/jhr.53.2.0115-6857R1.abstract}{Family Labor Supply and the Timing of Cash Transfers: Evidence from the Earned Income Tax Credit}.
+\textit{\textbf{Journal of Human Resources}} 53(2) 445-473, 2018.
+
+\item
+\href{https://www.dropbox.com/s/z5b267cu72o6xlg/tot_wage_v63_olo_revised.pdf?dl=0}{Tax Audit and Tax Evasion: Evidence from Taiwanese Firms}. \textit{\textbf{Academia Economic Paper }}, \textit{forthcoming}, 2020 (with Yu-Chun Cheng, Hsing-Wen Han).
+
+
+\item
+\href{http://www.econ.ntu.edu.tw/ter/new/data/new/forthcoming/108-015.pdf}{Wealth Distribution in Taiwan 2004–2014: Evidence from the Individual Wealth Register Data}. \textit{\textbf{Taiwan Economic Review}}, \textit{forthcoming}, 2020 (with Hsing-Wen Han, Hsien-Ming Lien, Kuang-Ta Lo, Chung-Hsin Tseng).
+
+\item
+\href{https://www.dropbox.com/s/z5b267cu72o6xlg/tot_wage_v63_olo_revised.pdf?dl=0}{Decoupling of Wage Growth and Productivity Growth in Taiwan: An Empirical Investigation}. \textit{\textbf{Academia Economic Paper}} 46(2) 263-322, 2018 (with Yi-Ling Lin).   
+\item \href{http://www.econ.sinica.edu.tw/UpFiles/2013090214141704234/Periodicals_Pdf2013090215152407682/aep37-3-3.pdf}{Who Pays Pensions? The Impact of New Labor Pension Scheme on Labor Wages}.
+  \textit{\textbf{Academia Economic Paper}} 37, 339-368, 2009 (with Ming-Ching Luoh).
+
+
+
+\end{enumerate}
+%\end{itemize}
+
+
+%\section*{Other Publications}
+
+%\begin{enumerate}[resume]
+%\item Blevins, J.~R. (2009).
+ % \href{https://jblevins.org/research/generic-list}{A Generic Linked List Implementation in Fortran 95}.
+  %\textit{ACM Fortran Forum} 28(3), 2--7.
+%\end{enumerate}
+
+%\section*{\textbf{Working Papers}}
+
+%\begin{enumerate}[resume]
+%\begin{itemize}	
+
+%\item
+ % \href{https://www.dropbox.com/s/sv4gaqpfk53n5a2/optimal_ui_tzu_ting_v53.pdf?dl=0}{An Evaluation of Optimal Unemployment Insurance Using Two Natural Experiments } (with Po-Chun Huang).
+
+
+
+
+%\href{}{The Effect of Compensation on Employee Turnover: Evidence from Taiwanese Administrative Data} (with Hsing-Wen Han, Yu-Chun Cheng, Hao-Chung Li, and Wen-Chieh Lee).
+
+ 
+%\end{itemize}
+%\end{enumerate}
+
+
+
+ 
+ 
+% \end{enumerate}
+
+
+
+\section*{\textbf{Awards}}
+
+\begin{itemize}
+	\item Chao-Nan Chen Memorial Award (台灣經濟學會陳昭南院士紀念獎), 2025
+    \item 	Outstanding Research Award from National Science and Technology Council (國家科學及技術委員會傑出研究獎), 2024
+	\item Young Scholar Research Award from Taiwan Risk and Insurance Association (台灣風險與管理學會年輕學者研究獎), 2024
+		\item Outstanding Paper Award from Taiwan Economic Association (台灣經濟學會傑出論文獎), 2024
+	\item Sun Yun-suan Academic Award from Sun Yun-suan Foundation (孫運璿基金會最佳論文獎), 2023
+	\item Young Scholar Award from Taiwan Econometric Society (台灣計量經濟學會年輕學者獎), 2023
+	\item Outstanding Teaching Award from National Taiwan University (國立台灣大學教學優良獎), 2023	
+	\item Outstanding Faculty Research Scholarship from Academia Sinica (中央研究院學術研究獎金), 2023
+	\item Outstanding Teaching Award from National Taiwan University (國立台灣大學教學優良獎), 2022
+	\item Outstanding Faculty Research Scholarship from Academia Sinica (中央研究院學術研究獎金), 2022
+	\item Early-Career Investigator Research Achievement Award (中研院年輕學者研究成果獎), 2022		
+	\item Outstanding Paper Award from Taiwan Economic Association (台灣經濟學會傑出論文獎), 2021
+	\item Ta-You Wu Memorial Award from Ministry of Science and Technology (科技部吳大猷先生紀念獎), 2021
+	\item Outstanding Teaching Award from National Taiwan University (國立台灣大學教學優良獎), 2021
+	\item Outstanding Faculty Research Scholarship from Academia Sinica (中央研究院學術研究獎金), 2021
+	\item Outstanding Paper Award from Taiwan Economic Association (台灣經濟學會傑出論文獎), 2020
+	\item Outstanding Faculty Research Scholarship from Academia Sinica (中央研究院學術研究獎金), 2020
+\end{itemize}
+
+
+% \subsection*{Scientific Software}
+%
+% \begin{itemize}
+% \item \href{https://jblevins.org/research/pdest}{PDESolutionTester},
+%   A Mathematica program for the symbolic verification of exact solutions
+%   of nonlinear partial differential equations,
+%   with Jeff Heath and Willy Hereman (2002).
+% \item \href{https://jblevins.org/research/dfbr}{DFBR},
+%   A Stata program for distribution-free estimation of heteroskedastic
+%   binary response models,
+%   with Shakeeb Khan (2009).
+% \end{itemize}
+
+
+
+
+\section*{\textbf{Peer Review}}
+
+Reviewer for
+\textit{American Economic Review}, \textit{Proceedings of the National Academy of Sciences}, \textit{Journal of Public Economics}, \textit{Economic Journal}, \textit{Journal of Health Economics}, \textit{Journal of Development Economics}, \textit{Journal of Population Economics},  \textit{Journal of Applied Econometrics}, \textit{Labour Economics}, \textit{Health Economics}, \textit{Journal of Policy Analysis and Management} \textit{National Tax Journal}, \textit{Demography},
+\textit{Economic Inquiry}, \textit{Journal of Economic Behavior \& Organization},  \textit{Journal of Regional Science}, 
+\textit{Pacific Economic Review},
+\textit{Economics Bulletin}, \textit{Food Policy}, \textit{Climate Change Economics},
+\textit{經濟論文},
+\textit{經濟論文叢刊},\textit{人文及社會科學集刊}
+
+
+\section*{\textbf{Editorial Broad}}
+
+\begin{itemize}
+	\item Academia Economic Papers (經濟論文)
+	\item Taiwan Economic Forecast and Policy (臺灣經濟預測與政策)
+	\item Taiwan Economic Review (經濟論文叢刊)
+	
+\end{itemize}
+
+\section*{\textbf{Academic and Administrative Service}}
+
+\begin{itemize}
+  \item Institute Representative, Academia Sinica (中央研究院院務代表), 2025--2027.
+  
+  \item Member, Institutional Review Board / Research Ethics Committee, Academia Sinica  
+  (中央研究院醫學倫理委員會委員), 2018--present.
+  
+  \item Member, Academic Affairs Committee,  
+  Institute of Economics, Academia Sinica  
+  (中央研究院經濟研究所學術事務委員會委員).
+  
+  \item Member and Executive Secretary, Faculty Search Committee,  
+  Institute of Economics, Academia Sinica  
+  (中央研究院經濟研究所新聘委員會委員暨執行秘書).
+  
+  \item Member, Academic Seminar Committee,  
+  Institute of Economics, Academia Sinica  
+  (中央研究院經濟研究所學術研討會委員).
+  
+  \item Member, Editorial Committee, Taiwan Economic Association  
+  (台灣經濟學會編輯委員會委員).
+  
+  \item Board Member, Taiwan Population Association  
+  (台灣人口學會理事).
+  
+  \item Board Member, Taiwan Econometric Society  
+  (台灣經濟計量學會理事).
+  
+  \item Deputy Secretary General, Taiwan Health Economics Association  
+  (台灣健康經濟學會副秘書長).
+  
+  \item Committee Member, National Health Insurance Global Budget Review Committee,  
+  National Development Council  
+  (國家發展委員會全民健康保險總額審議委員).
+  
+  \item Committee Member, National Health Insurance Global Budget Review Committee,  
+  Ministry of Health and Welfare  
+  (衛生福利部全民健康保險總額審議委員).
+  
+  \item Committee Member, Labor Policy Review Panel, Ministry of Labor  
+  (勞動部勞動政策議題審議委員).
+  
+  \item Advisory Committee Member, Drug Pricing for Innovative Pharmaceuticals,  
+  National Health Insurance Administration, Ministry of Health and Welfare  
+  (健保署臺灣首發新藥核價諮詢委員).
+\end{itemize}
+
+
+
+
+\section*{\textbf{Teaching}}
+
+\subsection*{National Chengchi University}
+
+\begin{itemize}
+\item Causal Inference and Data Science in Economics (Ph.D./M.A.):
+  \href{https://causaldatalab.wordpress.com/teaching/}{Spring 2018, Spring 2019, Spring 2020, Spring 2021, Spring 2022, Spring 2023, Spring 2024}. % 5 students, 5 quarter 
+\item Causal Inference and Big Data (M.A.):
+  \href{https://causaldatalab.wordpress.com/2017/02/24/causal-inference-and-big-data-spring-2017/}{Spring 2017}. % 47 students, 5 
+\end{itemize}
+
+
+\subsection*{National Taiwan University}
+
+\begin{itemize}
+	\item Topics in Labor Economics: Empirical Methods and Applications  (Ph.D./M.A./B.A.):
+	\href{https://sites.google.com/view/cpelab/teaching?authuser=0}{Spring 2019, Spring 2020, Spring 2021, Spring 2022, Spring 2023, Spring 2024}. % 5 students, 5 quarter 
+	\item Applied Microeconomics  (Ph.D./M.A.):
+	\href{https://sites.google.com/view/cpelab/teaching?authuser=0}{Spring 2020, Fall 2020, Spring 2021, Fall 2021}.
+		\item Applied Econometrics  (Ph.D./M.A.):
+	\href{https://causaldatalab.wordpress.com/teaching/}{Fall 2023}.
+
+	
+\end{itemize}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% End: 

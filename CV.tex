@@ -29,7 +29,12 @@
   \newCJKfontfamily\heiti{Microsoft JhengHei}
 }{%
   \setmainfont{TeX Gyre Termes}  % Times New Roman substitute on Linux/Overleaf
-  \setCJKmainfont{FandolSong}    % lighter than Noto Serif CJK TC, closer to PMingLiU
+  % AR PL UMing TW: thin Traditional Chinese Ming, closest to PMingLiU
+  \IfFontExistsTF{AR PL UMing TW}{%
+    \setCJKmainfont{AR PL UMing TW}
+  }{%
+    \setCJKmainfont{FandolSong}  % fallback if uming not found
+  }
   \newCJKfontfamily\heiti{FandolHei}
 }
 %\setCJKmainfont{新細明體} %設定中文為系統上的字型,而英文不去更動,使用原TeX字型

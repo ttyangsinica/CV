@@ -31,8 +31,7 @@ jobs:
           extra_system_packages: |
             fontconfig
           pre_compile: |
-            mkdir -p /usr/share/fonts/arphic
-            kpsewhich uming.ttc && cp $(kpsewhich uming.ttc) /usr/share/fonts/arphic/ || true
+            apk add --no-cache font-arphic-uming 2>/dev/null || echo "font-arphic-uming not in Alpine"
             fc-cache -f -v
           continue_on_error: true
 

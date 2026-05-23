@@ -31,7 +31,10 @@ jobs:
           extra_system_packages: |
             fontconfig
             font-noto-cjk
-          pre_compile: fc-cache -f -v
+          pre_compile: >-
+            mkdir -p /usr/share/fonts/noto-cjk-tc &&
+            cp fonts/NotoSerifCJKtc-Light.otf /usr/share/fonts/noto-cjk-tc/ &&
+            fc-cache -f -v
           continue_on_error: true
 
       - name: Upload PDF (CV)

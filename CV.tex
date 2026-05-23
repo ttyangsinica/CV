@@ -30,11 +30,16 @@
 }{%
   \setmainfont{TeX Gyre Termes}  % Times New Roman substitute on Linux/Overleaf
   % Noto Serif CJK TC: full Traditional Chinese coverage.
-  % Use Light weight if available (thinner, closer to PMingLiU); else Regular.
-  \IfFontExistsTF{Noto Serif CJK TC Light}{%
-    \setCJKmainfont[UprightFont=* Light, BoldFont=* Regular]{Noto Serif CJK TC}%
+  % Prefer bundled Light OTF (thinner, closer to PMingLiU).
+  % Fall back to system Light (if fontconfig registered it), then Regular.
+  \IfFontExistsTF{fonts/NotoSerifCJKtc-Light.otf}{%
+    \setCJKmainfont[BoldFont=Noto Serif CJK TC]{fonts/NotoSerifCJKtc-Light.otf}%
   }{%
-    \setCJKmainfont{Noto Serif CJK TC}%
+    \IfFontExistsTF{Noto Serif CJK TC Light}{%
+      \setCJKmainfont[UprightFont=* Light, BoldFont=* Regular]{Noto Serif CJK TC}%
+    }{%
+      \setCJKmainfont{Noto Serif CJK TC}%
+    }%
   }
   \newCJKfontfamily\heiti{Noto Sans CJK TC}
 }
